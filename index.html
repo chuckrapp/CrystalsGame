@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crystals Collector Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="titleBar" class="row">
+            <div class="col-md-12 text-center">
+                <img id="dekuLink" src="assets/images/DekuLink.png">
+                <img id="mainLogo" src="assets/images/LoZ-logo.png">
+                <img id="dekuLinkFlip" src="assets/images/DekuLinkFlip.png">
+                <h1 id="rupeeTitle">Rupee Wrangler!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div id="rules" class="col-md-12">
+                <p>
+                    You will be given a random number at the start of the game.
+                </p>
+                <p>
+                    There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+                </p>
+                <p>
+                    You will win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.
+                </p>
+                <p>
+                    The value of each crystal is hidden from you until you click on it.
+                </p>
+                <p>
+                    Each time the game starts, the game will change the values of each crystal.
+                </p>
+                <p>
+                    Try to do it in the fewest number of clicks!
+                </p>
+            </div>
+        </div>
+        <div id="totalsRow" class="row text-center">
+            <div class="col-md-6 scoreBox">
+                <div>Your Total: </div>
+                <div id="userScoreOutput"></div>
+            </div>
+            <div class="col-md-6 scoreBox">
+                <div>Target Score: </div>
+                <div id="targetScoreOutput"></div>
+            </div>
+        </div>
+        <div id="rupeeRow" class="row">
+            <div class="text-center">
+                <div class="col-md-3 col-sm-3">
+                    <img src="assets/images/RedRupee.png" id="rubyOutput" class="rupee" />
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <img src="assets/images/SkyRupee.png" id="diamondOutput" class="rupee" />
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <img src="assets/images/GoldRupee.png" id="citrineOutput" class="rupee" />
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <img src="assets/images/GreenRupee.png" id="emeraldOutput" class="rupee" />
+                </div>
+            </div>
+        </div>
+        <div id="counterRow" class="row">
+            <div class="col-md-4 scoreBox">
+                <span>Wins: </span><span id="winsCounterOutput"></span>
+            </div>
+            <div class="col-md-4 scoreBox">
+                <span>Clicks: </span><span id="totalClicksOutput"></span>
+            </div>
+            <div class="col-md-4 scoreBox">
+                <span>Losses: </span><span id="lossCounterOutput"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p id="statusOutput"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
